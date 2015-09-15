@@ -1,0 +1,10 @@
+Deskdoo sensitive files:
+------------------------
+* application\config\hooks.php - 'DeskdooLoginClass.php'
+* application\helpers\deskdoo_helper.php - deskdooApi(...)
+* application\hooks\DeskdooLoginClass.php - API Keys, loginByDeskdoo() !!!
+
+with Deskdoo modifications:
+---------------------------
+* application\core\Admin_Controller.php
+* application\core\Response_Model.php

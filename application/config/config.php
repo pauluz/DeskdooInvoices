@@ -28,7 +28,7 @@ $config['base_url'] = '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -86,6 +86,32 @@ $config['charset'] = 'UTF-8';
 
 /*
 |--------------------------------------------------------------------------
+| Allow deletion of invoices after they have been sent
+|--------------------------------------------------------------------------
+|
+| As it is forbidden in many countries to delete invoices that have been
+| sent to a customer the deletion is disabled by default. If you need
+| this function anyway you can enable invoice deletion by setting the
+| value to TRUE
+|
+*/
+$config['enable_invoice_deletion'] = FALSE;
+
+/*
+|--------------------------------------------------------------------------
+| Disable the read-only mode
+|--------------------------------------------------------------------------
+|
+| As it is forbidden in many countries to alter invoices that have been
+| sent to a customer the ability to alter invoices is disabled by default.
+| If you need this function anyway you can enable invoice deletion by
+| setting the value to TRUE
+|
+*/
+$config['disable_read_only'] = FALSE;
+
+/*
+|--------------------------------------------------------------------------
 | Enable/Disable System Hooks
 |--------------------------------------------------------------------------
 |
@@ -93,7 +119,7 @@ $config['charset'] = 'UTF-8';
 | setting this variable to TRUE (boolean).  See the user guide for details.
 |
 */
-$config['enable_hooks'] = FALSE;
+$config['enable_hooks'] = TRUE;
 
 
 /*
@@ -182,7 +208,8 @@ $config['directory_trigger']	= 'd'; // experimental not currently in use
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 0;
+
+$config['log_threshold'] = 2;
 
 /*
 |--------------------------------------------------------------------------
@@ -226,7 +253,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'invoiceplanedeskdoo';
 
 /*
 |--------------------------------------------------------------------------
@@ -247,7 +274,7 @@ $config['encryption_key'] = '';
 |
 */
 $config['sess_cookie_name']		= 'ci_session';
-$config['sess_expiration']		= 7200;
+$config['sess_expiration']		= 864000; // 10 Days
 $config['sess_expire_on_close']	= FALSE;
 $config['sess_encrypt_cookie']	= FALSE;
 $config['sess_use_database']	= FALSE;
@@ -281,7 +308,7 @@ $config['cookie_secure']	= FALSE;
 | COOKIE data is encountered
 |
 */
-$config['global_xss_filtering'] = FALSE;
+$config['global_xss_filtering'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------

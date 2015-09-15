@@ -7,3 +7,18 @@ application/cache/*
 application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
+
+## pZ: @Deskdoo
+/application/config/development
+/application/config/database.php
+
+/uploads/temp/*
+!/uploads/temp/remove.txt
+/uploads/archive/*
+/uploads/customer_files/*
+/uploads/import/*
+/application/helpers/mpdf/ttfontdata/*
+
+.idea
+.sass-cache
+adminer.php
