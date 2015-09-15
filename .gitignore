@@ -10,6 +10,7 @@ application/logs/*
 
 ## pZ: @Deskdoo
 /application/config/development
+/application/config/testing
 /application/config/database.php
 
 /uploads/temp/*
