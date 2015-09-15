@@ -1,4 +1,12 @@
 <?php
+/**
+ * Bootstrap for PHPUnit.
+ * 
+ * This file is almost the very same Codeigniter's index.php (based on 'CI_VERSION', '2.2.4')
+ * Changes:
+ * - define('ENVIRONMENT', 'testing');
+ * - error_reporting(-1);
+ */
 
 /*
  *---------------------------------------------------------------
@@ -19,12 +27,7 @@
  *
  */
 
-// pZ: @Deskdoo - add ENVIRONMENT production 
- if (is_dir(__DIR__."/application/config/development")) {
-    define('ENVIRONMENT', 'development');
-} else {
-    define('ENVIRONMENT', 'production');
-}
+define('ENVIRONMENT', 'testing');
 
 /*
  *---------------------------------------------------------------
@@ -52,6 +55,8 @@ if (defined('ENVIRONMENT'))
 			exit('The application environment is not set correctly.');
 	}
 }
+
+error_reporting(-1);
 
 /*
  *---------------------------------------------------------------
@@ -127,7 +132,7 @@ if (defined('ENVIRONMENT'))
  * Un-comment the $assign_to_config array below to use this feature
  *
  */
-	// $assign_to_config['name_of_config_item'] = 'value of config item';
+	// $assign_to_config['uri_protocol'] = 'QUERY_STRING';
 
 
 
